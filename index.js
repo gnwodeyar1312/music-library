@@ -45,7 +45,7 @@ async function getArtistAlbums(albumId) {
   const artists = [];
   for (let albumArtist of albumArtists) {
     const artist = await artistModel.findOne({
-      where: { id: albumArtist.genreId },
+      where: { id: albumArtist.artistId },
     });
     if (artist) artists.push(artist);
   }
